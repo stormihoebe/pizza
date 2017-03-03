@@ -2,9 +2,8 @@
   display: none;
   text-align: center;
 }
-ul {
-  list-style-type: none;
-  margin: none;
+#toppingsOutput {
+  line-height: 80%;
 }
 body {
 background-image: url(../img/scratched.jpg);
@@ -81,6 +80,14 @@ h1 {
 .orderRow {
   padding: 40px;
 }
+#priceOutput {
+  display: block;
+  margin-bottom: 40px;
+}
 #initialReceipt h3{
   text-align: center;
+}
+#startOver, #submitOrder {
+  width: 200px;
+  margin-top: 10px;
 }
