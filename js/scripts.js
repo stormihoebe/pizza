@@ -1,4 +1,4 @@
-//Pizza Constructor 
+//Pizza Constructor
 function Pizza(type, size, toppings, delivery){
 this.type = type;
 this.size = size;
@@ -45,3 +45,22 @@ Pizza.prototype.Receipt = function() {
 
   return price;
 };
+//-------------------------------------Front end-----------------------------------------
+$(function(){
+  $("#pizzaForm").submit(function(event){
+    event.preventDefault();
+    typeInput = $("#pizzaType").val();
+    sizeInput = $("#pizzaSize").val();
+    deliveryInput = $("#pizzaDelivery").val();
+    $("input:checkbox[name=toppings]:checked").each(function(){
+      var topping = $(this).val();
+      toppings.push(topping);
+    });
+    console.log(toppings);
+  });
+
+
+
+
+
+});
