@@ -15,7 +15,7 @@ var price = 0;
 var cart = [];
 var total = 0
 var pizzaPrice = 0;
-};
+
 //Prototype for Pizza Receipt
 Pizza.prototype.Receipt = function() {
 //Type
@@ -90,6 +90,7 @@ $(function(){
     });
     $("#priceOutput").text("$ "+ pizzaPrice);
   }); //end pizzaForm Submit
+
 
   $(".viewCart").click(function(){
     $(".cartRow").show();
