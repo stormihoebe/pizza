@@ -102,7 +102,9 @@ h1 {
   width: 200px;
   margin-top: 10px;
 }
-
+#addressForm {
+  display: none;
+}
 .redFooter {
   background: #6d0019;
   margin-top: 0px;

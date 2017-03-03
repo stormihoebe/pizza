@@ -56,6 +56,7 @@ var cart = [];
 var total = 0
 var pizzaPrice = 0;
 
+
 //-------------------------------------Front end-----------------------------------------
 $(function(){
   $("#pizzaForm").submit(function(event){
@@ -72,7 +73,7 @@ $(function(){
       var topping = $(this).val();
       toppings.push(topping);
     });
-    var pizzaOrder = new Pizza(typeInput, sizeInput, toppings, deliveryInput, price);
+    pizzaOrder = new Pizza(typeInput, sizeInput, toppings, deliveryInput, price);
     cart.push(pizzaOrder);
     cart.forEach(function(pizza){
       $("#pizzaInCart").append("<p>"+ pizza.type +"</p>");
@@ -100,7 +101,16 @@ $(function(){
     location.reload();
   });
   $('#submitOrder').click(function() {
-    alert("Your order has been submitted. It will be ready in 30 minutes.")
+    if (deliveryInput === "Delivery"){
+      $("#addressForm").show();
+    }else {
+    alert("Your order has been submitted. It will be ready in 30 for pick up in 30 minutes. Page will refresh.");
+    location.reload();
+  };
   });
-
+  $("#addressForm").submit(function(event) {
+    event.preventDefault();
+    alert("Your order has been submitted. Expect delivery within 45 minutes. Page will refresh.");
+    location.reload();
+  });
 });
