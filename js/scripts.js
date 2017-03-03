@@ -6,7 +6,6 @@ this.toppings = toppings;
 this.delivery = delivery;
 this.price = price;
 };
-
 var typeInput;
 var sizeInput;
 var toppings = [];
