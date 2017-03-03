@@ -49,11 +49,15 @@ var resetPrice = function(){
   price = 0;
   toppings = [];
 }
+
+
+
 //-------------------------------------Front end-----------------------------------------
 $(function(){
   $("#pizzaForm").submit(function(event){
     event.preventDefault();
     resetPrice();
+    $("#toppingsOutput").text("");
     typeInput = $("#pizzaType").val();
     sizeInput = $("#pizzaSize").val();
     deliveryInput = $("#pizzaDelivery").val();
@@ -63,7 +67,14 @@ $(function(){
     });
 
     var pizzaOrder = new Pizza(typeInput, sizeInput, toppings, deliveryInput);
-      console.log(pizzaOrder.Receipt());
+      $("#typeOutput").text(typeInput);
+      $("#sizeOutput").text(sizeInput);
+      $("#deliveryOutput").text(deliveryInput);
+      toppings.forEach(function(topping){
+        $("#toppingsOutput").append("<li>" + topping + "</li>");
+      });
+      $("#priceOutput").text(pizzaOrder.Receipt());
+
   });
 
 
