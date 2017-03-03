@@ -48,7 +48,9 @@ Pizza.prototype.Receipt = function() {
 var resetPrice = function(){
   price = 0;
   toppings = [];
-}
+};
+
+var cart = [];
 
 
 
@@ -68,13 +70,15 @@ $(function(){
       toppings.push(topping);
     });
     var pizzaOrder = new Pizza(typeInput, sizeInput, toppings, deliveryInput);
-      $("#typeOutput").text(typeInput);
-      $("#sizeOutput").text(sizeInput);
-      $("#deliveryOutput").text(deliveryInput);
-      toppings.forEach(function(topping){
-        $("#toppingsOutput").append("<p>"+ topping + "</p>");
-      });
-      $("#priceOutput").text("$ "+pizzaOrder.Receipt());
+    cart.push(pizzaOrder);
+    $("#yourCartButton").text(cart.length);
+    $("#typeOutput").text(typeInput);
+    $("#sizeOutput").text(sizeInput);
+    $("#deliveryOutput").text(deliveryInput);
+    toppings.forEach(function(topping){
+      $("#toppingsOutput").append("<p>"+ topping + "</p>");
+    });
+    $("#priceOutput").text("$ "+pizzaOrder.Receipt());
   });
   $('#startOver').click(function() {
     location.reload();
