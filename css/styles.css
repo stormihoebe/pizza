@@ -1,3 +1,6 @@
+#result {
+  display: none;
+}
 body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2c2c2c+0,595959+0,4c4c4c+0,000000+0,474747+0,000000+0,2c2c2c+0,000000+0,000000+11,000000+11,2b2b2b+50,111111+100,666666+100,1c1c1c+100,131313+100 */
   background: #2c2c2c; /* Old browsers */
@@ -62,7 +65,7 @@ h1 {
     background: -webkit-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #6d0019 0%,#8f0222 56%,#a90329 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d0019', endColorstr='#a90329',GradientType=0 ); /* IE6-9 */
-    color: white; 
+    color: white;
   }
 .orderRow {
   margin-top: 20px;
