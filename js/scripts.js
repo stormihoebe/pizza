@@ -16,9 +16,9 @@ var price = 0;
 Pizza.prototype.Receipt = function() {
 //Type
   if (typeInput === "Build Your Own"){
-		price += "7";
+		price += 7;
 	}else {
-		price += "10";
+		price += 10;
   };
 //Size
   if (sizeInput === "Personal"){
@@ -45,10 +45,15 @@ Pizza.prototype.Receipt = function() {
 
   return price;
 };
+var resetPrice = function(){
+  price = 0;
+  toppings = [];
+}
 //-------------------------------------Front end-----------------------------------------
 $(function(){
   $("#pizzaForm").submit(function(event){
     event.preventDefault();
+    resetPrice();
     typeInput = $("#pizzaType").val();
     sizeInput = $("#pizzaSize").val();
     deliveryInput = $("#pizzaDelivery").val();
@@ -56,7 +61,9 @@ $(function(){
       var topping = $(this).val();
       toppings.push(topping);
     });
-    console.log(toppings);
+
+    var pizzaOrder = new Pizza(typeInput, sizeInput, toppings, deliveryInput);
+      console.log(pizzaOrder.Receipt());
   });
 
 
