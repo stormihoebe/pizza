@@ -6,20 +6,16 @@ this.toppings = toppings;
 this.delivery = delivery;
 this.price = price;
 };
+//global variables
 var typeInput;
 var sizeInput;
 var toppings = [];
 var deliveryInput;
 var price = 0;
-
-var arrayList = function(array){
-  array.join(", ");
+var cart = [];
+var total = 0
+var pizzaPrice = 0;
 };
-
-Pizza.prototype.CartItem = function(){
-  return this.type + ", " + this.size + ": " + this.toppings.join(", ");
-
-}
 //Prototype for Pizza Receipt
 Pizza.prototype.Receipt = function() {
 //Type
@@ -56,13 +52,7 @@ Pizza.prototype.Receipt = function() {
 var resetPrice = function(){
   price = 0;
   toppings = [];
-
 };
-
-var cart = [];
-var total = 0
-var pizzaPrice = 0;
-
 
 //-------------------------------------Front end-----------------------------------------
 $(function(){
@@ -82,12 +72,13 @@ $(function(){
     });
     pizzaOrder = new Pizza(typeInput, sizeInput, toppings, deliveryInput, price);
     cart.push(pizzaOrder);
-    cart.forEach(function(pizza){
-      $("#pizzaInCart").append("<p>"+pizzaOrder.CartItem()+"</p>");
-    });
+    console.log(cart);
     pizzaPrice = pizzaOrder.Receipt();
     total += pizzaPrice;
-
+    cart.forEach(function(pizza){
+      $("#pizzaInCart").append("<p> <strong>" + pizza.type+ "</strong>  Size: " + pizza.size + "  Toppings: " + pizza.toppings.join(", ") +
+    "<p>");
+    });
     $(".totalOutput").text(total);
 
     $(".numberInCart").text("("+ cart.length+")");
@@ -98,22 +89,25 @@ $(function(){
       $("#toppingsOutput").append("<p>"+ topping + "</p>");
     });
     $("#priceOutput").text("$ "+ pizzaPrice);
-  });
+  }); //end pizzaForm Submit
+
   $(".viewCart").click(function(){
     $(".cartRow").show();
-
   });
+
   $('#startOver').click(function() {
     location.reload();
   });
+
   $('#submitOrder').click(function() {
     if (deliveryInput === "Delivery"){
       $("#addressForm").show();
     }else {
     alert("Your order has been submitted. It will be ready in 30 for pick up in 30 minutes. Page will refresh.");
     location.reload();
-  };
+    };
   });
+
   $("#addressForm").submit(function(event) {
     event.preventDefault();
     alert("Your order has been submitted. Expect delivery within 45 minutes. Page will refresh.");
