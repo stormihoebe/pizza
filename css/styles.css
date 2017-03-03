@@ -8,7 +8,10 @@ body {
   background: -webkit-linear-gradient(top,  #2c2c2c 0%,#595959 0%,#4c4c4c 0%,#000000 0%,#474747 0%,#000000 0%,#2c2c2c 0%,#000000 0%,#000000 11%,#000000 11%,#2b2b2b 50%,#111111 100%,#666666 100%,#1c1c1c 100%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  #2c2c2c 0%,#595959 0%,#4c4c4c 0%,#000000 0%,#474747 0%,#000000 0%,#2c2c2c 0%,#000000 0%,#000000 11%,#000000 11%,#2b2b2b 50%,#111111 100%,#666666 100%,#1c1c1c 100%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2c2c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
-
+}
+.container {
+  padding: 0px;
+  border: #6d0019 solid 17px;
 }
 .header{
   background-image: url(../img/pizzaHeader.png);
@@ -57,6 +60,7 @@ h1 {
 }
 .panel {
   border-color: black;
+
 }
 .panel-heading {
   /*background Gradient*/
@@ -68,5 +72,8 @@ h1 {
     color: white;
   }
 .orderRow {
-  margin-top: 20px;
+  padding: 40px;
+}
+#initialReceipt h3{
+  text-align: center;
 }

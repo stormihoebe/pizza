@@ -57,6 +57,7 @@ $(function(){
   $("#pizzaForm").submit(function(event){
     event.preventDefault();
     resetPrice();
+    $("#initialReceipt").hide();
     $("#result").show();
     $("#toppingsOutput").text("");
     typeInput = $("#pizzaType").val();
