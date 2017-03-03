@@ -1,0 +1,14 @@
+.header{
+  background-image: url(../img/pizzaHeader.png);
+  background-color: rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 250px;
+}
+.jumbotron {
+  display: block;
+  margin: auto;
+  background-color: inherit;
+  text-align: center;
+  color: white;
+}

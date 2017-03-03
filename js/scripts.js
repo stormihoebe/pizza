@@ -73,7 +73,7 @@ $(function(){
       toppings.forEach(function(topping){
         $("#toppingsOutput").append("<li>" + topping + "</li>");
       });
-      $("#priceOutput").text(pizzaOrder.Receipt());
+      $("#priceOutput").text("$ "+pizzaOrder.Receipt());
 
   });
 
