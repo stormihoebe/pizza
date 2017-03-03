@@ -65,7 +65,6 @@ $(function(){
       var topping = $(this).val();
       toppings.push(topping);
     });
-
     var pizzaOrder = new Pizza(typeInput, sizeInput, toppings, deliveryInput);
       $("#typeOutput").text(typeInput);
       $("#sizeOutput").text(sizeInput);
@@ -74,11 +73,6 @@ $(function(){
         $("#toppingsOutput").append("<li>" + topping + "</li>");
       });
       $("#priceOutput").text("$ "+pizzaOrder.Receipt());
-
   });
-
-
-
-
 
 });
