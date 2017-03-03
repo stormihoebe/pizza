@@ -76,5 +76,11 @@ $(function(){
       });
       $("#priceOutput").text("$ "+pizzaOrder.Receipt());
   });
+  $('#startOver').click(function() {
+    location.reload();
+  });
+  $('#submitOrder').click(function() {
+    alert("Your order has been submitted. It will be ready in 30 minutes.")
+  });
 
 });
