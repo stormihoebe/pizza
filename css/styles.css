@@ -61,15 +61,24 @@ h1 {
     color: white;
     border: none;
 }
+.cartRow {
+  display: none;
+}
+
 .btn-success {
   display: block;
   margin: auto;
-}
-.panel {
-  border-color: black;
-  min-height: 650px;
 
 }
+.col-md-6 .panel {
+  border-color: black;
+  min-height: 650px;
+}
+.col-md-12 .panel {
+  border-color: black;
+  margin: 20px;
+}
+
 .panel-heading {
   /*background Gradient*/
     background: #6d0019; /* Old browsers */
@@ -89,7 +98,7 @@ h1 {
 #initialReceipt h3{
   text-align: center;
 }
-#startOver, #submitOrder {
+#startOver, #submitOrder, .btn-warning {
   width: 200px;
   margin-top: 10px;
 }

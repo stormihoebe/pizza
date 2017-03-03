@@ -1,9 +1,10 @@
 //Pizza Constructor
-function Pizza(type, size, toppings, delivery){
+function Pizza(type, size, toppings, delivery, price){
 this.type = type;
 this.size = size;
 this.toppings = toppings;
 this.delivery = delivery;
+this.price = price;
 };
 
 var typeInput;
@@ -48,11 +49,12 @@ Pizza.prototype.Receipt = function() {
 var resetPrice = function(){
   price = 0;
   toppings = [];
+
 };
 
 var cart = [];
-
-
+var total = 0
+var pizzaPrice = 0;
 
 //-------------------------------------Front end-----------------------------------------
 $(function(){
@@ -62,6 +64,7 @@ $(function(){
     $("#initialReceipt").hide();
     $("#result").show();
     $("#toppingsOutput").text("");
+    $("#pizzaInCart").text("");
     typeInput = $("#pizzaType").val();
     sizeInput = $("#pizzaSize").val();
     deliveryInput = $("#pizzaDelivery").val();
@@ -69,16 +72,29 @@ $(function(){
       var topping = $(this).val();
       toppings.push(topping);
     });
-    var pizzaOrder = new Pizza(typeInput, sizeInput, toppings, deliveryInput);
+    var pizzaOrder = new Pizza(typeInput, sizeInput, toppings, deliveryInput, price);
     cart.push(pizzaOrder);
-    $("#yourCartButton").text(cart.length);
+    cart.forEach(function(pizza){
+      $("#pizzaInCart").append("<p>"+ pizza.type +"</p>");
+    });
+    pizzaPrice = pizzaOrder.Receipt();
+    total += pizzaPrice;
+
+
+    $(".totalOutput").text(total);
+
+    $(".numberInCart").text("("+ cart.length+")");
     $("#typeOutput").text(typeInput);
     $("#sizeOutput").text(sizeInput);
     $("#deliveryOutput").text(deliveryInput);
     toppings.forEach(function(topping){
       $("#toppingsOutput").append("<p>"+ topping + "</p>");
     });
-    $("#priceOutput").text("$ "+pizzaOrder.Receipt());
+    $("#priceOutput").text("$ "+ pizzaPrice);
+  });
+  $(".viewCart").click(function(){
+    $(".cartRow").show();
+
   });
   $('#startOver').click(function() {
     location.reload();

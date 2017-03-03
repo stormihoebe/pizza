@@ -44,11 +44,25 @@
             </button>
         </div>
         <div class="col-md-2">
-            <button class="btn btn-danger">
-              Your Cart <span id="yourCartButton"></span>
+            <button class="btn btn-danger viewCart">
+              Shopping Cart <span id="yourCartButton" class="numberInCart"></span>
             </button>
         </div>
 
+      </div>
+      <div class="row cartRow">
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Your Cart</h3>
+            </div>
+            <div class="panel-body">
+              <h3>Pizzas in Your Cart</h3>
+              <span id="pizzaInCart"></span>
+              <h4>Total: $ <span class="totalOutput"></span></h4>
+            </div>
+          </div>
+        </div>
       </div>
 			<div class="row orderRow">
         <div class="col-md-6">
@@ -137,7 +151,9 @@
 
                 </div>
                 <br>
-                <h3>Total Price: <span id="priceOutput"></span></h3>
+                <h3>Price: <span id="priceOutput"></span></h3>
+                  <h4>Total: $ <span class="totalOutput"></span></h4>
+                <button type="button" class="btn btn-warning viewCart" name="button">View Cart <span class="numberInCart"></span></button>
                 <button type="button" id="submitOrder" class="btn btn-success" name="button">Submit Order</button>
                 <button type="button" id="startOver" class="btn btn-danger" name="button">Start Over</button>
 
