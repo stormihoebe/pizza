@@ -1,5 +1,10 @@
 #result {
   display: none;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: none;
 }
 body {
 background-image: url(../img/scratched.jpg);
