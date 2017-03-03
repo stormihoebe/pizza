@@ -13,7 +13,7 @@
 | Behavior |   Input   |   Output   |
 |----------|:---------:|:----------:|
 | Output can increase price of pizza by $1 for each topping selected| extra cheese | toppings = [extra cheese], price = +1 |
-| Output can increase price of pizza based on size| extra large | size = [extra large], price = +10 |
+| Output can increase price of pizza based on size| extra large | size = [extra large], price = +12 |
 | Output can increase price of pizza for delivery| delivery | delivery = [delivery], price = +5 |
 | Output can increase price of pizza for premium pizza| Meet Lovers | price += 4 |
 
