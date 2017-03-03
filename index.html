@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Pizza</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -11,12 +11,81 @@
   </head>
   <body class="container-fluid">
 		<div class="jumbotron">
-			<h1></h1>
-			<h2></h2>
+			<h1>Pizza</h1>
+			<h2>Order Your Pizza Here</h2>
 		</div>
 		<div class="container">
 			<div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title">Order Your Pizza</h3>
+            </div>
+            <div class="panel-body">
+              <form id="movieinfo">
+                <div class="form-group">
+                  <label for="">Premium Pizzas</label>
+                  <select class="form-control" id="movieName">
+                    <option value="Build Your Own">Build Your Own</option>
+                    <option value="Veggie Lovers">Veggie Lovers</option>
+                    <option value="Meat Lovers">Meat Lovers</option>
+                    <option value="Mushroom Madness">Mushroom Madness</option>
+                    <option value="Favorite">Favorite</option>
+                    <option value="Five Cheese">Five Cheese</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="">Size</label>
+                  <select class="form-control" id="age">
+                    <option value="Personal">Personal</option>
+                    <option value="Small">Small (1-2 people)</option>
+                    <option value="Medium">Medium (2-3 people)</option>
+                    <option value="Large">Large (3-4)</option>
+                    <option value="Extra Large">Extra Large(5-6)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="">Choose Your Topics</label><br>
+                  <input type="checkbox" name="toppings" value="Extra Cheese"> Extra Cheese<br>
+                  <input type="checkbox" name="toppings" value="car"> Mushrooms<br>
+                  <input type="checkbox" name="toppings" value="carpool"> Onion<br>
+                  <input type="checkbox" name="toppings" value="walk"> Tomato<br>
+                  <input type="checkbox" name="toppings" value="bus"> Pineapple<br>
+                  <input type="checkbox" name="toppings" value="train"> Bell Peppers<br>
+                  <input type="checkbox" name="toppings" value="streetcar"> Black Olives<br>
+                  <input type="checkbox" name="toppings" value="taxi"> Grilled Chicken<br>
+                  <input type="checkbox" name="toppings" value="rideshare"> Pepperoni<br>
+                  <input type="checkbox" name="toppings" value="skateboard"> Italian Sausage<br>
+                  <input type="checkbox" name="toppings" value="rollerblade"> Bacon<br>
+                  <input type="checkbox" name="toppings" value="scooter"> Ham<br>
+                  <input type="checkbox" name="toppings" value="other"> Roasted Garlic<br>
+                </div>
+                <div class="form-group">
+                  <label for="">Carry Out or Delivery</label>
+                  <select class="form-control" id="timeOfDay">
+                    <option value="Carry Out">Carry Out</option>
+                    <option value="Delivery">Delivery</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-warning">PURCHASE</button>
+              </form>
+            </div><!--end panel body-->
+          </div><!--end panel-->
 
+
+        </div><!--end column-->
+        <div class="col-md-6">
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title">Receipt</h3>
+            </div>
+            <div class="panel-body">
+              <div id="result">
+
+              </div>
+            </div>
+          </div>
+        </div>
 			</div><!--END row-->
 
 		</div><!--END container-->
