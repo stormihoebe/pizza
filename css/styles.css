@@ -9,10 +9,12 @@ body {
 background-image: url(../img/scratched.jpg);
 background-repeat: none;
 background-size: cover;
+padding: 20px;
 }
 .container {
   padding: 0px;
   border: #6d0019 solid 17px;
+  margin-bottom: 0px;
 }
 .header{
   background-image: url(../img/pizzaHeader.png);
@@ -90,4 +92,12 @@ h1 {
 #startOver, #submitOrder {
   width: 200px;
   margin-top: 10px;
+}
+
+.redFooter {
+  background: #6d0019;
+  margin-top: 0px;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
