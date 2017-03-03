@@ -12,6 +12,14 @@ var toppings = [];
 var deliveryInput;
 var price = 0;
 
+var arrayList = function(array){
+  array.join(", ");
+};
+
+Pizza.prototype.CartItem = function(){
+  return this.type + ", " + this.size + ": " + this.toppings.join(", ");
+
+}
 //Prototype for Pizza Receipt
 Pizza.prototype.Receipt = function() {
 //Type
@@ -75,11 +83,10 @@ $(function(){
     pizzaOrder = new Pizza(typeInput, sizeInput, toppings, deliveryInput, price);
     cart.push(pizzaOrder);
     cart.forEach(function(pizza){
-      $("#pizzaInCart").append("<p>"+ pizza.type +"</p>");
+      $("#pizzaInCart").append("<p>"+pizzaOrder.CartItem()+"</p>");
     });
     pizzaPrice = pizzaOrder.Receipt();
     total += pizzaPrice;
-
 
     $(".totalOutput").text(total);
 
