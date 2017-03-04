@@ -72,7 +72,6 @@ $(function(){
     });
     pizzaOrder = new Pizza(typeInput, sizeInput, toppings, deliveryInput, price);
     cart.push(pizzaOrder);
-    console.log(cart);
     pizzaPrice = pizzaOrder.Receipt();
     total += pizzaPrice;
     cart.forEach(function(pizza){
